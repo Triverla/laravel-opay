@@ -2,7 +2,7 @@
 
 namespace Triverla\LaravelOpay\Helpers;
 
-use Triverla\LaravelOpay\BankTransferPayload;
+use Triverla\LaravelOpay\Helpers\BankTransferPayload;
 
 class BulkBillsListPayload
 {
