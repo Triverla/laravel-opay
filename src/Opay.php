@@ -33,8 +33,8 @@ class Opay
     {
         $this->client = Http::withHeaders([
             'Authorization' => "Bearer {$this->generateSignature($payload)}",
-            'Content-Type' => 'application/json',
-            'MerchantID' => $this->config['merchant_id']
+            'Content-type' => 'application/json',
+            'MerchantId' => $this->config['merchant_id']
         ]);
 
         return $this->client;

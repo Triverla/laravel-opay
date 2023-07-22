@@ -3,6 +3,10 @@
 namespace Triverla\LaravelOpay;
 
 use Triverla\LaravelOpay\Exceptions\FailedRequestException;
+use Triverla\LaravelOpay\Helpers\BankTransferPayload;
+use Triverla\LaravelOpay\Helpers\BankTransferPayloadList;
+use Triverla\LaravelOpay\Helpers\WalletTransferPayload;
+use Triverla\LaravelOpay\Helpers\WalletTransferPayloadList;
 
 abstract class Transfer
 {

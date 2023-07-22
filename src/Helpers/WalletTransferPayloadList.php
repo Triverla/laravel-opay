@@ -1,6 +1,6 @@
 <?php
 
-namespace Triverla\LaravelOpay;
+namespace Triverla\LaravelOpay\Helpers;
 
 class WalletTransferPayloadList
 {

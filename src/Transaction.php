@@ -75,7 +75,7 @@ abstract class Transaction
             "billingCountry" => $billingCountry
         ];
 
-        $response = $this->opay->withBearerAuth($payload->toArray())->post($endpoint, $payload->toArray());
+        $response = $this->opay->withAuth()->post($endpoint, $payload);
 
         $result = $response->object();
         if ($response->failed()) {
