@@ -1,0 +1,19 @@
+{
+    "name": "triverla/laravel-opay",
+    "description": "A laravel package for opay",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Triverla\\LaravelOpay\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Benaiah Yusuf",
+            "email": "yusufbenaiah@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
