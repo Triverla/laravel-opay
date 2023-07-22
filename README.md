@@ -20,26 +20,26 @@ You'll then need to run `composer install` or `composer update` to download it a
 
 
 
-Once Laravel Monnify is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
+Once Laravel Opay is installed, you need to register the service provider. Open up `config/app.php` and add the following to the `providers` key.
 
 ```php
 'providers' => [
     ...
-    Triverla\LaravelMonnify\OpayServiceProvider::class,
+    Triverla\LaravelOpay\OpayServiceProvider::class,
     ...
 ]
 ```
 
 > If you use **Laravel >= 5.5** you can skip this step and go to [**`configuration`**](https://github.com/triverla/laravel-opay#configuration)
 
-* `Triverla\LaravelMonnify\OpayServiceProvider::class`
+* `Triverla\LaravelOpay\OpayServiceProvider::class`
 
 Also, register the Facade like so:
 
 ```php
 'aliases' => [
     ...
-    'Opay' => Triverla\LaravelOPay\Facades\Monnify::class,
+    'Opay' => Triverla\LaravelOPay\Facades\Opay::class,
     ...
 ]
 ```
@@ -96,7 +96,7 @@ Please feel free to fork this package and contribute by submitting a pull reques
 
 ### Bugs & Issues
 
-If you notice any bug or issues with this package kindly create and issues here [ISSUES](https://github.com/triverla/laravel-monnify/issues)
+If you notice any bug or issues with this package kindly create and issues here [ISSUES](https://github.com/triverla/laravel-opay/issues)
 
 ### Security
 
