@@ -48,7 +48,7 @@ class Opay
         $this->client = Http::withHeaders([
             'Authorization' => "Bearer {$this->config['public_key']}",
             'Content-Type' => 'application/json',
-            'MerchantID' => $this->config['merchant_id']
+            'MerchantId' => $this->config['merchant_id']
         ]);
 
         return $this->client;
