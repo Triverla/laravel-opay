@@ -15,7 +15,7 @@ abstract class Wallet
         $this->opay = $opay;
     }
 
-    public function  initiateTransaction(string $reference, string $userPhone, float $amount, string $userRequestIp, string $productName, string $productDesc, int $expiresAt = 30, string $currency = 'NGN')
+    public function initiateTransaction(string $reference, string $userPhone, float $amount, string $userRequestIp, string $productName, string $productDesc, int $expiresAt = 30, string $currency = 'NGN')
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/certpay/initialize";
 
@@ -45,7 +45,7 @@ abstract class Wallet
         return $result->data;
     }
 
-    public function  authorizeTransaction(string $reference, string $orderNo, string $userPhone, string $pin)
+    public function authorizeTransaction(string $reference, string $orderNo, string $userPhone, string $pin)
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/certpay/verifyPIN";
 
@@ -71,7 +71,7 @@ abstract class Wallet
         return $result->data;
     }
 
-    public function  sendOTP(string $reference, string $orderNo, string $payMethod)
+    public function sendOTP(string $reference, string $orderNo, string $payMethod)
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/certpay/sendOTP";
 
@@ -96,7 +96,7 @@ abstract class Wallet
         return $result->data;
     }
 
-    public function  verifyOTP(string $reference, string $orderNo, string $payMethod, string $otp)
+    public function verifyOTP(string $reference, string $orderNo, string $payMethod, string $otp)
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/certpay/verifyOTP";
 
@@ -122,7 +122,7 @@ abstract class Wallet
         return $result->data;
     }
 
-    public function  verifyStatus(string $reference, string $orderNo)
+    public function verifyStatus(string $reference, string $orderNo)
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/certpay/status";
 
@@ -146,7 +146,7 @@ abstract class Wallet
         return $result->data;
     }
 
-    public function  closeTransaction(string $reference, string $orderNo)
+    public function closeTransaction(string $reference, string $orderNo)
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/certpay/close";
 
@@ -170,7 +170,7 @@ abstract class Wallet
         return $result->data;
     }
 
-    public function  initializeRefund(string $reference, string $refundReference, float $refundAmount, string $orderNo, string $currency = 'NGN')
+    public function initializeRefund(string $reference, string $refundReference, float $refundAmount, string $orderNo, string $currency = 'NGN')
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/certpay/refund";
 
@@ -198,7 +198,7 @@ abstract class Wallet
         return $result->data;
     }
 
-    public function  verifyRefundStatus(string $reference, string $refundReference, float $refundAmount, string $refundOrderNo)
+    public function verifyRefundStatus(string $reference, string $refundReference, float $refundAmount, string $refundOrderNo)
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/certpay/refund";
 

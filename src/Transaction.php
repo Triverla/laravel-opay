@@ -343,7 +343,7 @@ abstract class Transaction
         return $result->data;
     }
 
-    public function  initiateBankTransferTransaction(string $reference, string $userPhone, float $amount, string $userRequestIp, string $productName, string $productDesc, int $expiresAt = 30, string $currency = 'NGN')
+    public function initiateBankTransferTransaction(string $reference, string $userPhone, float $amount, string $userRequestIp, string $productName, string $productDesc, int $expiresAt = 30, string $currency = 'NGN')
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/transaction/bankTransfer/initialize";
 
@@ -397,7 +397,7 @@ abstract class Transaction
         return $result->data;
     }
 
-    public function  initiateUSSDTransaction(string $reference, string $userPhone, float $amount, string $userRequestIp, string $productName, string $productDesc, int $expiresAt = 30, string $currency = 'NGN')
+    public function initiateUSSDTransaction(string $reference, string $userPhone, float $amount, string $userRequestIp, string $productName, string $productDesc, int $expiresAt = 30, string $currency = 'NGN')
     {
         $endpoint =  "{$this->opay->baseUrl}{$this->opay->v3}/transaction/ussd/initialize";
 
